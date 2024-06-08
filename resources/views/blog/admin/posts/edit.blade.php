@@ -4,7 +4,8 @@
 @php /** @var \App\Models\BlogPost $item */ @endphp
 <div class="container">
      @include('blog.admin.posts.includes.result_messages')
- 
+     @include('blog.admin.posts.includes.result_messages')
+
  @if ($item->exists)
     <form method="POST" action="{{ route('blog.admin.posts.update', $item->id) }}">
     @method('PATCH')
