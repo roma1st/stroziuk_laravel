@@ -125,7 +125,7 @@ class BlogPostObserver
     protected function setUser(BlogPost $blogPost)
     {
         
-        $blogPost->user_id = auth()->id() ?? BlogPost::UNKNOWN_USER;
+        $blogPost->user_id = 1;
         
     }
 }
