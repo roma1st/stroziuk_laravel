@@ -16,4 +16,16 @@ use App\Models\BlogPost;
     return $posts;
     }
 
+
+    public function show($id)
+    {
+        $post = BlogPost::with(['user','category']) -> find($id);
+
+        if (!$post) {
+            return response()->json(['message' => 'Пост не знайдено'], 404);
+        }
+
+        return $post;
+    }
+
 }
