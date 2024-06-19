@@ -57,3 +57,11 @@ Route::group($groupData, function () {
 
  Route::get('api/blog/posts', [\App\Http\Controllers\Api\Blog\PostController::class, 'index']);
 
+ Route::get('api/blog/categories/forCombobox', [\App\Http\Controllers\Api\Blog\CategoryGet::class, 'index']);
+ Route::get('api/blog/categories', [\App\Http\Controllers\Api\Blog\CategoryController::class, 'index']);
+ Route::get('api/blog/categories/{id}', [\App\Http\Controllers\Api\Blog\CategoryController::class, 'show']);
+ Route::post('api/blog/categories/create', [\App\Http\Controllers\Api\Blog\CategoryController::class, 'store']);
+ Route::put('api/blog/categories/edit/{id}', [\App\Http\Controllers\Api\Blog\CategoryController::class, 'update']);
+ Route::delete('api/blog/categories/delete/{id}', [\App\Http\Controllers\Api\Blog\CategoryController::class, 'destroy']);
+ 
+ 
